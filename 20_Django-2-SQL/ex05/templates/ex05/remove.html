@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}Exercise 05: ORM - Deleting data{% endblock %}
+
+{% block content %}
+<div>
+    <h1>Form Remove Title (ORM)</h1>
+    <div>
+        {% if titles %}
+            <form method="post">
+                {% csrf_token %}
+                <select name="title">
+                    {% for title in titles %}
+                    <option value="{{ title }}">{{ title }}</option>
+                    {% endfor %}
+                </select>
+                <button type="submit">Remove</button>
+            </form>
+        {% else %}
+            <p>No data available</p>
+        {% endif %}
+    </div>
+</div>
+
+{% endblock %}

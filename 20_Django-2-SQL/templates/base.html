@@ -1,0 +1,15 @@
+{% load static %}
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>{% block title %}SQL{% endblock %}</title>
+        {% block style %}<link rel="stylesheet" href="{% static 'css/style.css' %}">{% endblock %}
+    </head>
+    <body>
+		<main>
+            {% block content %}{% endblock %}
+        </main>
+    </body>
+</html>

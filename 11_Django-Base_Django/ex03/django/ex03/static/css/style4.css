@@ -1,0 +1,14 @@
+body {
+  color: black;
+}
+
+table, th, td {
+  border: 5px solid cyan;
+  border-collapse: collapse;
+}
+
+th, td {
+  width: 80px;
+  height: 40px;
+  text-align: center;
+}

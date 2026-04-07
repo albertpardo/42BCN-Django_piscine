@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}Exercise 08: SQL - Foreign Key{% endblock %}
+
+{% block content %}
+<div>
+    <h1>DISPLAY RESULT (SQL)</h1>
+    <div>
+        <table>
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Homeworld</th>
+                    <th>Climate</th>
+                </tr>
+            </thead>
+                <tbody>
+                {% for person in people %}
+                <tr>
+                    <td>{{ person.name }}</td>
+                    <td>{{ person.homeworld }}</td>
+                    <td>{{ person.climate }}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+</div>
+
+{% endblock %}

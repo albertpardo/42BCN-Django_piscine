@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+{% block title %}Ex01: Display process of a static page.{% endblock %}
+
+{% block content %}
+    <h1>Ex01: Display process of a static page.</h1>
+	<p>Displaying a static web page through Django involves a structured flow that transforms a user's request into a rendered HTML document. Here is the step-by-step process:</p>
+
+	<ol>
+		<li>
+			<strong>The Request:</strong> It all starts when a user enters a URL (e.g., <code>/ex01/display</code>) in their browser. This sends an HTTP Request to the web server.
+		</li>
+		<li>
+			<strong>URL Dispatcher (urls.py):</strong> Django receives the request and consults the <code>URLconf</code>. It searches for a pattern that matches the requested URL to determine which <strong>View</strong> function should handle it.
+		</li>
+		<li>
+			<strong>The View (views.py):</strong> The view acts as the "controller." For a static page, the view typically calls the <code>render()</code> function. This function links the logic with the presentation.
+		</li>
+		<li>
+			<strong>The Template Engine:</strong> The engine looks for the specific HTML file. If the template uses inheritance (like <code>base.html</code>), the engine merges the "skeleton" with the child's specific blocks to build a final, complete HTML file.
+		</li>
+		<li>
+			<strong>The Response:</strong> The view returns an <code>HttpResponse</code> object containing the generated HTML. Django sends this back to the user's browser, which finally renders the page on the screen.
+		</li>
+	</ol>
+
+	<p>This architecture follows the <strong>Separation of Concerns</strong> principle, keeping your logic (Python), data, and presentation (HTML) organized and independent.</p>
+
+{% endblock %}

@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}Exercise 03: Fifty shades of bic{% endblock %}
+
+{% block style %}
+    <link rel="stylesheet" href="{% static 'css/style4.css' %}">
+{% endblock %}
+
+{% block content %}
+<div>
+    <h2>Shading Table</h2>
+	<table>
+		<tr>
+			<th>BLACK</th>
+			<th>RED</th>
+			<th>BLUE</th>
+			<th>GREEN</th>
+		</tr>
+		{% for row in colors_table %}
+        	<tr>
+            	{% for color in row %}
+                	<td style="background-color:{{ color }}" title={{color}}></td>
+                {% endfor %}
+            </tr>
+        {% endfor %}
+	</table>
+
+</div>
+{% endblock %}

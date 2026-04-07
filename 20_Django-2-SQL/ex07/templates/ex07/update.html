@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}Exercise 07: ORM - Updating a data{% endblock %}
+
+{% block content %}
+<div>
+    <h1>UPDATE (SQL)</h1>
+    <div>
+        {% if titles %}
+            <form method="post">
+                {% csrf_token %}
+                <select name="title">
+                    {% for title in titles %}
+                    <option value="{{ title }}">{{ title }}</option>
+                    {% endfor %}
+                </select>
+                </br>
+                <textarea name="opening_crawl"></textarea>
+                </br>
+                <button type="submit">Update</button>
+            </form>
+        {% else %}
+            <p>No data available</p>
+        {% endif %}
+    </div>
+</div>
+
+{% endblock %}

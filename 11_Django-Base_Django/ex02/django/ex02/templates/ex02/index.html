@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+
+{% block title %}Ex02: First form{% endblock %}
+
+{% block content %}
+<div >
+     <div>
+        <h2>First form</h2>
+        <form method="post">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+    <div>
+        <h2>COMMENTS</h2>
+        <div>
+            {% for line in historic %}
+                {{ line|linebreaksbr }}
+            {% empty %}
+                <p>No historic comments!</p>
+            {% endfor %}
+        </div>
+    </div>
+
+</div>
+{% endblock %}

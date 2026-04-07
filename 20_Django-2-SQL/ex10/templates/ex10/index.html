@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}Exercise 10: ORM - Many to Many{% endblock %}
+
+{% block content %}
+<div>
+    <h1> EX10 - FORM (ORM)</h1>
+    <div>
+        <form method="post">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <button type="submit">Search</button>
+        </form>
+    </div>
+    <div>
+        {% if characters %}
+            <ul>
+                {% for character in characters %}
+                    <li>{{ character.name }} - {{ character.gender }} - {{ character.movies__title }} - {{ character.homeworld__name }} - {{ character.homeworld__diameter }}</li>
+                {% endfor %}
+            </ul>
+        {% else %}
+            <p>Nothing corresponding to your research</p>
+        {% endif %}
+    </div>
+</div>
+
+{% endblock %}

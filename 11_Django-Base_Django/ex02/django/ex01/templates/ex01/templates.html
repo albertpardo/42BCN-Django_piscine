@@ -1,0 +1,39 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Ex01: Template engine.{% endblock %}
+
+{% block style %}
+    <link rel="stylesheet" href="{% static 'css/style2.css' %}">
+{% endblock %}
+
+{% block content %}
+    <h1>Ex01: Template engine.</h1>
+	<p>Django’s template engine provides a powerful way to generate HTML dynamically using a mini-language that bridges the gap between Python and HTML.</p>
+
+	<hr>
+
+	<h3>1. Displaying Context Variables</h3>
+	<p>Variables passed from the view's context dictionary are rendered using double curly braces. For example: <code>{{ variable_name }}</code>.</p>
+
+	<h3>2. Blocks</h3>
+	<p>The <code>{&percnt; block &percnt;}</code> tag defines sections that child templates can override. This is the foundation of template inheritance, allowing us to reuse a <code>base.html</code> structure.</p>
+
+	<h3>3. Control Structures: Loops</h3>
+	<p>To iterate over a list of data, we use the <code>for ... in</code> loop:</p>
+	<pre>
+		{&percnt; for item in list &percnt;}
+			&lt;p&gt;{{ item }}&lt;/p&gt;
+		{&percnt; endfor &percnt;}
+	</pre>
+
+	<h3>4. Control Structures: If statements</h3>
+	<p>Conditional logic is handled by the <code>if</code> tag, allowing us to display content only when certain conditions are met:</p>
+	<pre>
+		{&percnt; if user.is_authenticated &percnt;}
+			&lt;p&gt;Welcome back!&lt;/p&gt;
+		{&percnt; else &percnt;}
+			&lt;p&gt;Please log in.&lt;/p&gt;
+		{&percnt; endif &percnt;}
+	</pre>
+{% endblock %}
