@@ -29,10 +29,10 @@
 
 - Activate __venv__ and download modules :
     - ```
-    python3 -m venv venv
-    source venv/bin/activate
-    pip install -r requirement.txt
-    ```
+        python3 -m venv venv
+        source venv/bin/activate
+        pip install -r requirement.txt
+        ```
 - Example of use : `python3 request_wikipedia.py "chocolatine"
 
 ## Exercise 03 — request an API 2
@@ -45,10 +45,10 @@
 
 - Activate __venv__ and download modules :
     - ```
-    python3 -m venv venv
-    source venv/bin/activate
-    pip install -r requirement.txt
-    ```
+        python3 -m venv venv
+        source venv/bin/activate
+        pip install -r requirement.txt
+        ```
     
 - Examples of use :
     - `python3 roads_to_phylosophy.py "philo"`
@@ -74,7 +74,7 @@
     - venv activation : `. ./myscript.sh`
     - now in __django_venv__ :
         - ```
-        cd ex05_django
-        python3 manage.py runserver
-        ```
+            cd ex05_django
+            python3 manage.py runserver
+            ```
     - In browser  [http://localhost:8000/helloworld](http://localhost:8000/helloworld)
