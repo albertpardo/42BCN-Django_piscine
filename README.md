@@ -1,6 +1,26 @@
-# PISCINE DJANGO  (2026-03-23 to 2026-04-05)
+# PISCINE DJANG
 
-Projects:
+Introduction to web development using the Django framework as part of the 42 School curriculum.
+
+The exercises progressively cover:
+
+* Python programming fundamentals
+* Object-oriented programming
+* Web development basics
+* Django framework usage
+* Database management with Django ORM
+* User authentication and sessions
+* Advanced Django features
+
+## Tech Stack
+
+* HTML / CSS
+* Python
+* Django and Django ORM
+* PostgreSQL
+
+## Modules
+
 - Django - 0 - Initiation
     - Shell scripting, HTML and CSS
 - Django - 0 - Starting
@@ -13,7 +33,6 @@ Projects:
     - Django intro.
 - Django - 2 - SQL
     - Django training exercise focused on SQL and ORM tasks using PostgreSQL
-    - Using Django to compare SQL code and ORM
 - Django - 3 - Sessions
 - Django - 3 - Advanced
 - Django - 3 - Final
